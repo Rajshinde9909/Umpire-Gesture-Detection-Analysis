@@ -14,14 +14,14 @@ This project focuses on detecting and analyzing umpire hand gestures during spor
 
 ## Prerequisites
 
-- Python 3.x
+- Python 3
 - OpenCV
 - NumPy
 - Matplotlib
 - scikit-learn
 - TensorFlow/Keras (for deep learning models)
 - Jupyter Notebook (optional, for development and testing)
-
+  
 ## Installation
 
 1. Clone the repository:
@@ -33,28 +33,4 @@ This project focuses on detecting and analyzing umpire hand gestures during spor
 2. Install the required packages:
    ```bash
    pip install -r requirements.txt
-   ```
-
-## Usage
-
-1. **Data Collection**: Capture video footage of umpire hand gestures using a camera. Save the footage in a directory.
-
-2. **Preprocessing**: Run the preprocessing script to extract frames and prepare the dataset.
-   ```bash
-   python preprocess.py --input_dir path_to_videos --output_dir path_to_processed_data
-   ```
-
-3. **Model Training**: Train the gesture recognition model using the prepared dataset.
-   ```bash
-   python train_model.py --data_dir path_to_processed_data --output_model path_to_save_model
-   ```
-
-4. **Real-time Detection**: Use the trained model to detect and recognize umpire gestures in real-time.
-   ```bash
-   python real_time_detection.py --model path_to_saved_model --video_source camera_or_video_path
-   ```
-
-5. **Data Logging and Analysis**: Log recognized gestures and analyze the data to generate line graphs.
-   ```bash
-   python analyze_gestures.py --log_dir path_to_log_files --output_dir path_to_save_analysis
    ```
