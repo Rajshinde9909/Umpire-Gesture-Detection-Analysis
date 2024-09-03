@@ -34,3 +34,27 @@ This project focuses on detecting and analyzing umpire hand gestures during spor
    ```bash
    pip install -r requirements.txt
    ```
+## How It Works
+
+### Gesture Recognition
+
+1. **Video Capture:** The application captures live video from the webcam using OpenCV.
+
+2. **Hand Detection:** The captured frames are processed by Mediapipe's Hands solution to detect hand landmarks.
+
+3. **Gesture Classification:** The detected hand landmarks are analyzed to classify gestures based on the position of the wrist landmark in different regions of the frame. The application is pre-configured to recognize five specific cricket umpire gestures:
+   - **Out**
+   - **Four**
+   - **Six**
+   - **New Ball**
+   - **Wide Ball**
+
+4. **Displaying Results:** Recognized gestures are displayed on the Tkinter interface in real-time, and the corresponding counts are updated in the gesture history.
+
+5. **Graphical Visualization:** A graph of the gesture history is displayed using Matplotlib when the "Show Graph" button is clicked.
+
+### UI Controls
+
+- **Recognize Gesture Button:** Starts the gesture recognition process. Once clicked, the application continuously monitors and detects gestures from the live video feed.
+
+- **Show Graph Button:** Displays a graph of the recognized gesture history, showing the counts of each gesture over time.
